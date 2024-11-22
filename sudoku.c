@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <conio.h>
+#include "auto_solve.h"
 
 // Размеры полей
 #define SIZE_4 4
@@ -207,11 +208,7 @@ int main() {
             }
         } else {
             // Автоматическое решение
-            #ifndef AUTO_SOLVE
-            #define AUTO_SOLVE
-            #include "auto_solve.h"
             auto_solve_sudoku(size, board, original_board);
-            #endif
             clear_terminal();
             print_board(size, board, original_board);
             if (check_solution(size, board, original_board)) {
