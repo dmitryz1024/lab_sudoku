@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <conio.h>
-#include "auto_solve.h"
 
 // Размеры полей
 #define SIZE_4 4
@@ -115,6 +114,7 @@ int check_solution(int size, int (*board)[size], int (*original_board)[size]) {
     return 1;
 }
 
+#include "auto_solve.h"
 // Основная функция
 int main() {
     int flag = 1;
