@@ -1,3 +1,5 @@
+#ifndef AUTO_SOLVE
+#define AUTO_SOLVE
 // Функция для автоматического решения и визуализации (брутфорс)
 int auto_solve_sudoku(int size, int (*board)[size], int (*original_board)[size]) {
     for (int row = 0; row < size; row++) {
@@ -23,3 +25,4 @@ int auto_solve_sudoku(int size, int (*board)[size], int (*original_board)[size])
     }
     return 1; // Если все ячейки заполнены
 }
+#endif
